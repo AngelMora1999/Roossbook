@@ -36,8 +36,6 @@ class User < ApplicationRecord
   			user.name = auth[:info][:name]
   		end
   		user.password = Devise.friendly_token[0,20]
-  		
-  		render :edit
   	end
   end
 end
