@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160709225224) do
     t.string   "last_name"
     t.text     "bio"
     t.string   "uid"
-    t.string   "providers"
+    t.string   "provider"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true

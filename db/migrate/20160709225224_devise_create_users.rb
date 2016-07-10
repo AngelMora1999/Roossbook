@@ -38,7 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
       #Social networks
       t.string :uid
-      t.string :providers
+      t.string :provider
 
       t.timestamps null: false
     end
