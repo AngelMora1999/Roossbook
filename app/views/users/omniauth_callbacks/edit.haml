@@ -7,9 +7,13 @@
 		=text_field_tag "user[username]", @user.username 
 	%div
 		%label{for:"user_email"} Correo electrónico
-		=text_field_tag "user[email]", @user.email, required: true 
+		=email_field_tag "user[email]", @user.email, required: true 
 	%div
 		%label{for:"user_name"} Nombre
 		=text_field_tag "user[name]", @user.name
+	%div
+		=text_field_tag "user[provider]", @user.provider, style: "display: none;"
+	%div
+		=text_field_tag "user[uid]", @user.uid, style: "display: none;"
 	%div
 		=submit_tag "Completar registro"
