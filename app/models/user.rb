@@ -28,6 +28,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
+  
+  validates :username, presence: true, uniqueness: true, length: {in: 3..12}
+  validates :username, presence: true, uniqueness: true, length: {minimum: 3,maximum: 12}
 
   def self.from_omniauth(auth)
   	where(provider: auth[:provider], uid: auth[:uid] ).first_or_create do |user|
