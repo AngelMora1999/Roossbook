@@ -12,7 +12,12 @@
   </head>
 
   <body>
-  	<p style="<%= 'display: none;' if alert.nil? && notice.nil?%>"><%= notice %><%= alert %></p>
-    <%= yield %>
+    <p style="<%= 'display: none;' if alert.nil? && notice.nil?%>"><%= notice %><%= alert %></p>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <%= render "partials/nav" %>
+      <main class="mdl-layout__content">
+        <div class="page-content"><%= yield %> </div>
+      </main>
+    </div>
   </body>
 </html>
