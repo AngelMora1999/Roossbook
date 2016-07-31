@@ -14,10 +14,27 @@ html, body{
 	padding: 2em 1.45em;
 }
 
+.full-width{
+	width: 100%;
+}
+
 .top-space{
 	margin-top: 1em;
 }
 
 .underline{
 	text-decoration: underline;
+}
+
+.remove-bullet-points{
+	list-style: none;
+	margin: 0;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.text-right{
+	text-align: right;
 }

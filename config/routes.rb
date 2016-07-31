@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   
   resources :posts
+  #GET /posts => posts_controller#index
+  #GET /posts/new =>  posts_controller#new
+  #POST /posts => posts_controller#create
+  #GET /posts/:id => posts_controller#show
+  #PUT/PATCH posts/:id => posts_controller#update
+  #GET posts/:id/edit => posts_controller#edit
+  #DELETE /posts/:id => posts_controller#destroy
+
   devise_for :users, controllers:{
   	omniauth_callbacks: "users/omniauth_callbacks"
   }
