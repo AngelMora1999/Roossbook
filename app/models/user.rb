@@ -29,9 +29,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
   
-  validates :username, presence: true, uniqueness: true, length: {in: 3..12}
+  #validates :username, presence: true, uniqueness: true, length: {in: 3..12}
   #validates :username, presence: true, uniqueness: true, length: {minimum: 3,maximum: 12}
-  validate :validate_username_regex
+  #validate :validate_username_regex
 
   has_many :posts
 
@@ -40,6 +40,7 @@ class User < ApplicationRecord
   		if auth[:info]
   			user.email = auth[:info][:email]
   			user.name = auth[:info][:name]
+        user.username = auth[:username]
         user.provider = auth[:provider]
         user.uid = auth[:uid]
   		end

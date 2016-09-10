@@ -12,8 +12,8 @@
 		%label{for:"user_name"} Nombre
 		=text_field_tag "user[name]", @user.name
 	%div
-		=text_field_tag "user[provider]", @user.provider, style: "display: none;"
+		=text_field_tag "user[provider]", @user.provider
 	%div
-		=text_field_tag "user[uid]", @user.uid, style: "display: none;"
+		=text_field_tag "user[uid]", @user.uid
 	%div
 		=submit_tag "Completar registro"
